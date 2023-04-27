@@ -12,6 +12,8 @@ function App() {
   const activeSlug = location.pathname.split('/').pop(); // Get the last part of the URL path
   useEffect(() => {
     document.body.classList.add(`page-${activeSlug}`); // Add the class to the body tag
+    document.body.classList.add(`page`); // Add  generic class to the body tag
+
     return () => {
       document.body.classList.remove(`page-${activeSlug}`); // Remove the class from the body tag when the component unmounts
     };
