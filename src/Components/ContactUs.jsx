@@ -2,15 +2,16 @@ import React, { useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import emailjs from "@emailjs/browser";
-import {FaUserAlt} from 'react-icons/fa';
-import {MdEmail} from 'react-icons/md'
+import { FaUserAlt } from 'react-icons/fa';
+import "react-toastify/dist/ReactToastify.css";
+import { MdEmail } from 'react-icons/md'
+import emailjs from "@emailjs/browser"
 
 function ContactUs() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [isValidEmail, setIsValidEmail] = useState(false);
-  //   const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_PUBLIC_KEY } = process.env;
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  const [isValidEmail, setIsValidEmail] = useState(false)
 
   const notify = () => {
     toast.success("Your Request has been sent😊", {
@@ -26,64 +27,56 @@ function ContactUs() {
   };
 
   function handleEmailChange(event) {
-    const inputEmail = event.target.value;
-    setEmail(inputEmail);
+    const inputEmail = event.target.value
+    setEmail(inputEmail)
 
-    const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-    setIsValidEmail(emailRegex.test(inputEmail));
+    const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
+    setIsValidEmail(emailRegex.test(inputEmail))
   }
 
   function NameinputChange(e) {
-    const inputText = e.target.value;
-    setName(inputText);
+    const inputText = e.target.value
+    setName(inputText)
   }
 
   function MessageInputChange(e) {
-    const inputText = e.target.value;
-    setMessage(inputText);
+    const inputText = e.target.value
+    setMessage(inputText)
   }
-
-    const form = useRef();
-  //   const sendEmail = (e) => {
-  //     e.preventDefault();
-  //     if (isValidEmail) {
-  //       emailjs
-  //         .sendForm(
-  //           `${REACT_APP_SERVICE_ID}`,
-  //           `${REACT_APP_TEMPLATE_ID}`,
-  //           form.current,
-  //           `${REACT_APP_PUBLIC_KEY}`
-  //         )
-  //         .then(
-  //           (result) => {
-  //             notify();
-  //             console.log(result.text);
-  //             setName("");
-  //             setEmail("");
-  //             setMessage("");
-  //           },
-  //           (error) => {
-  //             console.log(error.text);
-  //           }
-  //         );
-
-  //     } else {
-  //       toast.error("Please enter a correct email value");
-  //     }
-  //     emailjs.sendForm('service_9spedfi', 'template_juxtdiw', form.current, 'JEUgk1jZnrZLqJz5k')
-  //       .then((result) => {
-  //           notify()
-  //           console.log(result.text);
-  //       }, (error) => {
-  //           console.log(error.text);
-  //       });
-  //   };
+  const form = useRef()
+  const sendEmail = e => {
+    e.preventDefault()
+    if (isValidEmail) {
+      emailjs
+        .sendForm(
+          "service_9spedfi",
+          "template_juxtdiw",
+          form.current,
+          "JEUgk1jZnrZLqJz5k",
+        )
+        .then(
+          result => {
+            notify()
+            console.log(result.text)
+            setName("")
+            setEmail("")
+            setMessage("")
+          },
+          error => {
+            console.log(error.text)
+          }
+        )
+    } else {
+      //   toast.error("Please enter a correct email value");
+      console.log("Email is invalide")
+    }
+  }
   return (
     <>
       <div className="book-tour-section">
         <div className="booktourwrapper">
           <div className="book-tour-folder">
-            <form ref={form} className="book-tour-form" onSubmit="">
+            <form ref={form} className="book-tour-form" onSubmit={sendEmail}>
               <h2>Book a Tour</h2>
               <p>
                 Rationally encounter consequences that are extremely painful or
@@ -101,7 +94,7 @@ function ContactUs() {
                     onChange={NameinputChange}
                   />
                   <a href="/" className="input-icons">
-                  <FaUserAlt/>
+                    <FaUserAlt />
                   </a>
                 </div>
                 <div className="input-folder">
@@ -146,23 +139,6 @@ function ContactUs() {
               />
             </form>
           </div>
-          {/* <div className="Get-Inspired-to-The-Collaboration">
-            <div className="Get-Inspired-image">
-              <img src={get_Inspired_image}/>
-            </div>
-            <span>DOING GOOD, TOGETHER</span>
-            <h2>Get Inspired to The Collaboration</h2>
-            <div className="Get-Inspired-call-folder">
-              <div className="call-folder">
-                <a href="#"><i className="fa-solid fa-phone"></i></a>
-                <a href="#" className="call-btn">9987547773</a>
-              </div>
-              <div className="Appointment-folder">
-                <a href="#"><i className="fa-solid fa-arrow-right"></i></a>
-                <a href="#" className="Appointment-btn">Appointment</a>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </>

@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState} from "react";
 import Slider from "react-slick";
 import { ImLocation2 } from "react-icons/im";
-import card_image1 from "../images/card-image1.webp";
+
 import { Link } from "react-router-dom";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import client from "../Client";
@@ -55,15 +55,15 @@ const TourCard = () => {
   const [entry, setEntry] = useState([]);
 
   const [selectedFilter, setSelectedFilter] = useState("All");
-
-  const sliderRef = useRef(null);
   const filteredData = entry.filter((item) => {
     if (selectedFilter === 'All') {
       return true;
     } else {
-      return item.fields.packageTitle === selectedFilter;
+      return item.fields.countryRegion === selectedFilter;
     }
   });
+  const countryRegions = [...new Set(entry.map((item) => item.fields.countryRegion))];
+  countryRegions.sort(); // sort alphabetically
   useEffect(() => {
     const fetchPage = async () => {
       try {
@@ -88,12 +88,16 @@ const TourCard = () => {
       <div className="tour-filter">
         <div className="tour-filter">
           <button onClick={() => setSelectedFilter('All')} className={selectedFilter === 'All' ? 'active' : ''}>All</button>
-          <button onClick={() => setSelectedFilter('Europe')} className={selectedFilter === 'Europe' ? 'active' : ''}>Europe</button>
-          <button onClick={() => setSelectedFilter('US')} className={selectedFilter === 'US' ? 'active' : ''}>US</button>
-          <button onClick={() => setSelectedFilter('England')} className={selectedFilter === 'England' ? 'active' : ''}>England</button>
-          <button onClick={() => setSelectedFilter('Japan')} className={selectedFilter === 'Japan' ? 'active' : ''}>Japan</button>
-          <button onClick={() => setSelectedFilter('Costa Rica')} className={selectedFilter === 'Costa Rica' ? 'active' : ''}>Costa Rica</button>
-          <button onClick={() => setSelectedFilter('Australia')} className={selectedFilter === 'Australia' ? 'active' : ''}>Australia</button>
+
+          {countryRegions.map((region) => (
+            <button
+              key={region}
+              onClick={() => setSelectedFilter(region)}
+              className={selectedFilter === region ? "active" : ""}
+            >
+              {region}
+            </button>
+          ))}
         </div>
       </div>
       <div className="container">
@@ -116,7 +120,9 @@ const TourCard = () => {
                         <ImLocation2 /> Europe
                       </p>
                     </div>
-                    <span className="card-price">${packageStartingPrice}</span>
+                    <div className="price">
+                      <span className="card-price">${packageStartingPrice}</span>
+                    </div>
                   </div>
                   <p className="card-des">
                     {/* Lorem ipsum, dolor sit amet consectetur adipisicing elit.

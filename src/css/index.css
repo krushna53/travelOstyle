@@ -9,7 +9,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Poppins", sans-serif;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
 
@@ -21,6 +22,7 @@ html{
   margin: 90px auto 0px auto;
   width: 1154px;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -38,6 +40,15 @@ html {
   right: 0%;
   z-index: 3;
   display: none;
+}
+
+.top-header-section-folder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
 }
 
 .banner-image img {
@@ -89,24 +100,37 @@ html {
   color: white;
 }
 
-.top-header-section-folder {
+.page- .top-header-section-folder {
   position: absolute;
   top: 0%;
   left: 0%;
   right: 0%;
   z-index: 12;
+
 }
 
 .top-header-wrapper-folder {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 25px 40px 10px 40px;
+  background: #0000003b;
+  box-shadow: 1px 2px 0px 5px #0000003b;
+}
+
+.page- .top-header-wrapper-folder {
   padding: 25px 40px;
+  background: none;
+  box-shadow: none;
+}
+
+.page- .logo-folder h2 {
+  color: white;
 }
 
 .logo-folder h2 {
   font-size: 40px;
-  color: white;
+  color: #333;
 }
 
 .menu-folder {
@@ -119,11 +143,15 @@ html {
   list-style: none;
 }
 
+.page- .menu-folder li a {
+  color: white;
+}
+
 .menu-folder li a {
   font-size: 16px;
   text-decoration: none;
   margin: 0px 10px;
-  color: white;
+  color: #333;
 }
 
 .show-btn {
@@ -239,6 +267,7 @@ html {
   z-index: 3;
   margin-top: -14px;
 }
+
 .curtain {
   margin: 0 auto;
   width: 100%;
@@ -263,11 +292,11 @@ html {
   left: 0;
 }
 
-.curtain__wrapper input[type="checkbox"]:checked ~ div.curtain__panel--left {
+.curtain__wrapper input[type="checkbox"]:checked~div.curtain__panel--left {
   transform: translateX(0);
 }
 
-.curtain__wrapper input[type="checkbox"]:checked ~ div.curtain__panel--right {
+.curtain__wrapper input[type="checkbox"]:checked~div.curtain__panel--right {
   transform: translateX(0);
 }
 
@@ -310,6 +339,7 @@ html {
 .curtain__content img {
   width: 100%;
 }
+
 .banner-right-image {
   position: absolute;
   top: 45%;
@@ -321,15 +351,16 @@ html {
   display: flex;
   justify-content: center;
 }
+
 .banner-container {
   position: relative;
 }
-.curtain__wrapper
-  input[type="checkbox"]:not(:checked)
-  ~ div.banner-right-image {
+
+.curtain__wrapper input[type="checkbox"]:not(:checked)~div.banner-right-image {
   opacity: 0;
   transition: all 1s ease-out;
 }
+
 .scroll-arrow {
   position: absolute;
   bottom: 3%;
@@ -344,6 +375,17 @@ html {
   justify-content: center;
   text-decoration: none;
 }
+
+.logo-folder h2 {
+  color: #fff;
+  font-weight: bolder;
+}
+
+.menu-folder li a {
+  color: #fff;
+  font-weight: bold;
+}
+
 /* banner end here */
 
 /* Tour Card css starts */
@@ -355,8 +397,13 @@ html {
 .card-wrapper {
   width: 366px !important;
   box-shadow: 0px 3px 13px #dddddd;
+  position: relative;
 }
-
+.price {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+}
 .img-div {
   width: 100%;
   height: 225px;
@@ -381,10 +428,11 @@ html {
   justify-content: space-between;
   align-items: center;
 }
+
 .travel-info p {
   margin: 1px 0px 0px -4px;
   font-size: 15px !important;
-  color: #676767;
+  color: #54b7d1;
 }
 
 .Tour-section {
@@ -393,17 +441,20 @@ html {
   margin: 0px auto;
   margin: 70px auto 0px auto;
 }
+
 .Tour-section h2 {
   font-size: 50px;
   text-transform: uppercase;
   margin: 0px 0px 0px 17px;
   color: #535557;
 }
+
 .card-des {
   font-size: 15px !important;
   margin: 14px 0px 20px 0px !important;
   color: #676767;
 }
+
 .card-btn {
   text-align: center;
   font-size: 15px;
@@ -413,18 +464,22 @@ html {
   color: white;
   background-color: #54b7d1;
 }
-.slick-slide:nth-child(odd) .card-wrapper .card-btn {
+
+/* .slick-slide:nth-child(odd) .card-wrapper .card-btn {
   background-color: #ec6170;
 }
+
 .slick-slide:nth-child(odd) .card-wrapper .price-folder p span {
   background-color: #ec6170;
-}
+} */
+
 .tour-filter {
   display: flex;
   flex-wrap: wrap;
   gap: 22px;
   margin: 12px 0px 20px 10px;
 }
+
 .tour-filter button {
   padding: 9px 32px;
   font-size: 17px;
@@ -434,18 +489,23 @@ html {
   box-shadow: 0px 2px 15px #e9e9e9;
   color: #676767;
   cursor: pointer;
+  text-transform: uppercase;
 }
+
 .Tour-section .container .slick-slide {
   margin-bottom: 15px;
   padding-left: 10px;
 }
+
 .Tour-section .container .slick-prev {
-  left: 7px;
-  top: 104%;
+  left: -50px;
 }
+
 .Tour-section .container .slick-next {
-  top: 104%;
-  left: 70px;
+  right:-18px;
+}
+.Tour-section .slick-next, .Tour-section .slick-prev{
+  top: 40%;
 }
 .Tour-section .container .slick-next:before,
 .Tour-section .container .slick-prev:before {
@@ -454,10 +514,12 @@ html {
   opacity: 1;
   color: #676767;
 }
-.card-price{
+
+.card-price {
   font-size: 24px;
   color: #535557;
 }
+
 /* Tour Card css end */
 
 /* About Us css starts */
@@ -477,6 +539,7 @@ html {
   height: 280px;
   display: block;
 }
+
 .about_us_title h2 {
   font-size: 35px;
   font-weight: bold;
@@ -487,6 +550,7 @@ html {
   margin-top: 5px;
   font-weight: 600;
 }
+
 .about_us_wrapper {
   display: flex;
   align-items: center;
@@ -509,6 +573,7 @@ html {
   top: 14%;
   left: 0;
 }
+
 .about_us_content p {
   max-width: 100%;
   width: 645px;
@@ -516,15 +581,18 @@ html {
   line-height: 2;
   font-size: 15px;
 }
+
 .about_us_right img:nth-child(2) {
   display: none;
 }
+
 .about_us_wrapper img {
   width: 600px;
   max-width: 100%;
   height: 418px;
   display: block;
 }
+
 /* about us css ends */
 
 /* Contact Us Css starts */
@@ -540,13 +608,14 @@ html {
 }
 
 .book-tour-form {
-  max-width: 500px;
+  max-width: 100%;
   padding: 42px 25px 37px 25px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   border-radius: 15px;
   background-color: white;
+  width: 500px;
 }
 
 .input-contenar {
@@ -584,6 +653,8 @@ html {
   border-radius: 15px;
   border: 1px solid #e6e2e3;
   color: #757072;
+  max-width: 100%;
+    max-height: 100%;
 }
 
 .Book-tour-submit-btn-folder {
@@ -609,8 +680,8 @@ html {
   cursor: pointer;
   background: radial-gradient(100% 100% at 100% 0%, #89e5ff 0%, #5468ff 100%);
   box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%),
-  0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%),
-  inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+    0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%),
+    inset 0px -0.01em 0px rgb(58 65 111 / 50%);
   padding: 0 2em;
   border-radius: 0.3em;
   color: #fff;
@@ -661,9 +732,11 @@ html {
   width: 159px;
   margin-bottom: 19px;
 }
+
 .footer-background-folder span {
   font-size: 19px;
 }
+
 .footer-background-folder h2 {
   font-size: 48px;
   margin: 15px 0 25px;
@@ -695,6 +768,7 @@ html {
 .Appointment-btn {
   color: black !important;
 }
+
 /* contact us css end */
 
 /* footer start */
@@ -707,14 +781,17 @@ html {
   background-size: cover;
   color: white;
 }
+
 .footer-background-folder h2 {
   font-size: 39px;
   margin: 10px 0px 50px 0px;
 }
+
 .footer-background-folder p {
   margin: 0px 0px 0px 0px;
   font-size: 19px;
 }
+
 .footer-container-wrapper {
   max-width: 1211px;
   margin: 0px auto;
@@ -727,6 +804,7 @@ html {
   z-index: 12;
   background-color: white;
 }
+
 .footer-conatiner {
   display: flex;
   justify-content: center;
@@ -735,65 +813,77 @@ html {
   margin-top: -90px;
   background-color: white;
 }
-.footer-container-wrapper span{
+
+.footer-container-wrapper span {
   display: flex;
   justify-content: center;
   font-size: 14px;
   color: #757072;
 }
-.footer-container-wrapper span a{
+
+.footer-container-wrapper span a {
   text-decoration: none;
   color: #757072;
   margin: 0px 5px;
 }
-.footer-container-wrapper span a:hover{
+
+.footer-container-wrapper span a:hover {
   color: rgb(81, 145, 250);
 }
+
 .footer-folder1 h2,
 .footer-folder2 h2 {
   font-size: 23px;
   margin-bottom: 12px;
   color: #535557;
 }
+
 .footer-folder1 p {
   font-size: 13px;
   max-width: 325px;
   color: #757072;
 }
+
 .footer-folder2 {
   display: flex;
   flex-direction: column;
 }
+
 .footer-folder2 a {
   margin-bottom: 2px;
   color: #757072;
   text-decoration: none;
   font-size: 14px;
 }
+
 .footer-iocn {
   margin-top: 13px;
   display: flex;
   gap: 14px;
 }
+
 .footer-iocn a {
   font-size: 21px;
   color: rgb(81, 145, 250);
 }
+
 /* footer end */
 
 /* aboutus terms and condition section || terms-condition-section || Privacy-policy-section || Refund-policy-section all pages start*/
-.aboutus-terms-condition-banner, 
-.terms-condition-banner{
+.aboutus-terms-condition-banner,
+.terms-condition-banner {
   position: relative;
 }
-.aboutus-banner-image img, 
-.terms-condition-banner-image img{
+
+.aboutus-banner-image img,
+.terms-condition-banner-image img {
   width: 100%;
   height: 420px;
   filter: brightness(0.9);
 }
-.aboutus-banner-image-title, 
-.terms-condition-banner-image-title{
+
+.aboutus-banner-image-title,
+.terms-condition-banner-image-title {
   position: absolute;
   top: 50%;
   left: 0%;
@@ -805,79 +895,120 @@ html {
   text-align: center;
   font-size: 52px;
 }
-.aboutus-terms-condition-title, 
-.terms-condition-title{
+
+.aboutus-terms-condition-title,
+.terms-condition-title {
   max-width: 646px;
   font-size: 24px;
   margin: 30px 0px 19px 0px;
   color: #535557;
 }
-.aboutus-terms-condition-wrapper p, 
-.terms-condition-wrapper p{
+
+.aboutus-terms-condition-wrapper p,
+.terms-condition-wrapper p {
   font-size: 15px;
   line-height: 30px;
   color: #757072;
 }
-.terms-condition-wrapper p{
+
+.terms-condition-wrapper p {
   margin: 30px 0px 30px 0px;
 }
-.aboutus-terms-condition-text-container, 
-.terms-condition-text-container{
+
+.aboutus-terms-condition-text-container,
+.terms-condition-text-container {
   max-width: 1152px;
   margin: 0px auto;
 }
-.aboutus-client-folder{
+
+.aboutus-client-folder {
   width: 249px;
   text-align: center;
   padding: 33px 0px;
   border-radius: 10px;
   box-shadow: 0px 3px 6px #e5e5e5;
 }
-.aboutus-client-numbers{
+
+.aboutus-client-numbers {
   display: flex;
   justify-content: center;
   gap: 14px;
   align-items: center;
 }
-.aboutus-client-numbers a{
+
+.aboutus-client-numbers a {
   font-size: 25px;
   color: #5191fa;
 }
-.aboutus-client-numbers span{
+
+.aboutus-client-numbers span {
   font-size: 27px;
   font-weight: 900;
   color: #535557;
 }
-.aboutus-client-folder h2{
+
+.aboutus-client-folder h2 {
   font-size: 19px;
   color: #757072;
 }
+
 .aboutus-client-conatiner {
   display: flex;
   justify-content: center;
   gap: 36px;
   margin: 70px 0px 50px 0px;
 }
+
 /* aboutus terms and condition section || terms-condition-section || Privacy-policy-section || Refund-policy-section all pages end*/
 .banner-section {
   overflow: hidden;
 }
+
 .banner-mobile {
   display: none;
 }
+
+
+.page-costa-rica-entry-r-equirements .logo-folder h2,
+.page-costa-rica-entry-r-equirements .menu-folder li a {
+  color: black !important;
+}
 .card-des p{
   height: 92px;
+
+}
+
+.banner_title {
+  position: absolute;
+  top: 38%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 20px;
+  left: 0%;
+  right: 0%;
+}
+
+.banner_title h1 {
+  font-size:4rem;
+  color: #fff;
+  text-shadow: 2px 2px #ff0000;
 }
 
 /* responsive start */
-@media only screen and (min-width: 1400px){
+@media only screen and (min-width: 1400px) {
   .banner-title {
     transform: translateY(-95px) !important;
   }
+
   .Tour-section {
     padding: 20px 0px 50px 0px;
   }
 }
+
 @media only screen and (max-width: 768px) {
   .top-header-section {
     position: fixed;
@@ -956,14 +1087,17 @@ html {
     backdrop-filter: blur(0px);
     background: rgb(237 237 237 / 0%);
   }
-  .curtain__wrapper input[type="checkbox"]{
+
+  .curtain__wrapper input[type="checkbox"] {
     display: none;
   }
+
   .banner-right-image {
     position: absolute;
     top: 33.6%;
     left: 20%;
   }
+
   .banner-right-image img {
     width: 144px; 
   }
@@ -1064,6 +1198,7 @@ html {
     width: 100%;
     margin: 0;
   }
+
   .about_us_wrapper img,
   .about_us_title {
     width: 100%;
@@ -1071,19 +1206,24 @@ html {
     margin-bottom: 23px;
     height: auto;
   }
+
   .top-header-section-folder {
     display: none;
   }
+
   .about_us_right img:nth-child(2) {
     margin: 0px auto;
   }
+
   .about_us_title h2 {
     font-size: 32px;
   }
+
   .about_us_title span {
     font-size: 16px;
     font-weight: 600;
   }
+
   .about_us_content p {
     max-width: 342px;
     margin-left: 0px;
@@ -1091,35 +1231,43 @@ html {
     font-size: 15px;
     margin-top: 16px;
   }
+
   .about_us {
     width: 100%;
     margin: 0px auto;
     height: 665px;
     max-height: 100%;
   }
+
   .about_us_right {
     margin-top: 29px;
   }
+
   .call-folder,
   .Appointment-folder {
     font-size: 16px;
     width: 174px;
     margin: 0px auto;
   }
+
   .Get-Inspired-call-folder {
     display: flex;
     flex-direction: column;
   }
+
   .footer-background-folder h2 {
     font-size: 33px;
     margin: 10px 0px 38px 0px;
   }
+
   .footer-background-folder span {
     font-size: 16px;
   }
+
   .book-tour-section {
     margin-top: 40px;
   }
+
   .footer-conatiner {
     width: 100%;
     display: flex;
@@ -1128,103 +1276,140 @@ html {
     gap: 38px;
     padding: 51px 16px;
   }
+
   .about_us_left {
     width: 100%;
     padding: 33px 10px;
     top: 100%;
   }
+
   .tour-filter button {
     padding: 10px 21px;
     font-size: 14px;
   }
+
   .tour-filter {
     gap: 11px;
     margin: 0px 0px 29px 0px;
     justify-content: center;
   }
+
   .banner-image {
     display: none !important;
   }
+
   .banner-mobile {
     display: block !important;
   }
+
   .Tour-section {
     padding: 45px 0px 50px 0px;
     max-width: 387px;
   }
+
   .footer-folder1 h2,
   .footer-folder2 h2 {
     font-size: 28px;
   }
+
   .footer-folder1 p {
     font-size: 15px;
     max-width: 378px;
   }
+
   .footer-folder2 a {
     font-size: 16px;
   }
+
   .footer-iocn a {
     font-size: 26px;
   }
+
   .footer-container-wrapper span {
     font-size: 9px;
   }
+
   .footer-container-wrapper span a {
     margin: 0px 3px;
   }
-  .aboutus-banner-image img, 
-  .terms-condition-banner-image img{
+
+  .aboutus-banner-image img,
+  .terms-condition-banner-image img {
     width: 100%;
     height: 218px !important;
   }
-  .aboutus-banner-image-title, 
-  .terms-condition-banner-image-title{
+
+  .aboutus-banner-image-title,
+  .terms-condition-banner-image-title {
     font-size: 28px !important;
   }
-  .aboutus-terms-condition-wrapper p, 
-  .terms-condition-wrapper p{
+
+  .aboutus-terms-condition-wrapper p,
+  .terms-condition-wrapper p {
     font-size: 14px !important;
     line-height: 27px !important;
   }
-  .aboutus-terms-condition-text-container, 
-  .terms-condition-text-container{
+
+  .aboutus-terms-condition-text-container,
+  .terms-condition-text-container {
     max-width: 342px !important;
   }
-  .aboutus-terms-condition-title, 
-  .terms-condition-title{
+
+  .aboutus-terms-condition-title,
+  .terms-condition-title {
     font-size: 19px !important;
     margin: 30px 0px 0px 0px !important;
   }
-  .aboutus-terms-condition-title{
+
+  .aboutus-terms-condition-title {
     margin: 30px 0px 17px 0px !important;
   }
+
   .aboutus-client-folder {
     width: 228px !important;
     padding: 35px 0px !important;
   }
+
   .aboutus-client-numbers span {
     font-size: 24px !important;
   }
+
   .aboutus-client-numbers a {
     font-size: 22px !important;
   }
+
   .aboutus-client-folder h2 {
     font-size: 18px !important;
   }
+
   .aboutus-client-conatiner {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-  .curtain__wrapper input[type="checkbox"]:checked ~ div.curtain__panel--left {
+
+  .curtain__wrapper input[type="checkbox"]:checked~div.curtain__panel--left {
     transform: translateX(0);
   }
+
   .scroll-arrow {
     position: absolute;
     bottom: 1%;
   }
-  .card-wrapper{
+
+  .card-wrapper {
     width: 100% !important;
   }
+
+  .banner_title {
+    top: 10%;
+    right: 21%;
+    gap: 10px;
+  }
+
+  .banner_title h1 {
+    font-size: 30px;
+  }
 }
+
 /* responsive end */
