@@ -12,7 +12,7 @@ function Header(){
             <div className="top-header-section">
                 <div className="top-header-wrapper">
                     <div className="logo">
-                        <h2>Travleostyle</h2>
+                        <h2>TravelOStyle</h2>
                     </div>
                     <ul onClick={toggleModal} className="menu">
                         <li><NavLink to="/">Home</NavLink></li>
