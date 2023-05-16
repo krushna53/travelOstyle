@@ -109,17 +109,44 @@ const TourcardDetails = () => {
             const id = info.fields.sys;
             return (
               <React.Fragment key={id} >
-                <div className="tour-details-container" key={id}>
-                  {
-                    entry.map((d, i) => (
-                      <img key={i} src={d.fields.fullBanner?.fields?.file?.url} alt="banner_image" className="content-img" />
-                    ))
-                  }
+                <div className="demoBanner">
+                  <div className="tour-details-container" key={id}>
+                    {
+                      entry.map((d, i) => (
+                        <img key={i} src={d.fields.fullBanner?.fields?.file?.url} alt="banner_image" className="content-img" />
+                      ))
+                    }
+                  </div>
+                  <div className="banner_title">
+                    <h1>{packageTitle}</h1>
+                    <button className="tour-book-btn" onClick={handleButtonClick}>Book Now</button>
+                    <p className="content-info">
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout. The point of using Lorem Ipsum is that it
+                      has a more-or-less normal distribution of letters, as
+                      opposed to using 'Content here, content here', making it
+                      look like readable English. Many desktop publishing
+                      packages and web page editors now use Lorem Ipsum as their
+                      default model text, and a search for 'lorem ipsum' will
+                      uncover many web sites still in their infancy.
+                    </p>
+                  </div>
                 </div>
-                <div className="banner_title">
-                  <h1>{packageTitle}</h1>
-                  <button className="tour-book-btn" onClick={handleButtonClick}>Book Now</button>
-                </div>
+                <p id="page-details-des">
+                  It is a long established fact that a reader will be
+                  distracted by the readable content of a page when looking
+                  at its layout. The point of using Lorem Ipsum is that it
+                  has a more-or-less normal distribution of letters, as
+                  opposed to using 'Content here, content here', making it
+                  look like readable English. Many desktop publishing
+                  packages and web page editors now use Lorem Ipsum as their
+                  default model text, and a search for 'lorem ipsum' will
+                  uncover many web sites still in their infancy.
+                </p>
+                <button className="tour-query-btn" id="page-details-des-btn" onClick={handleOpen}>
+                  Submit Query
+                </button>
                 <div className="page-container">
                   <div className="box_wrapper">
                     <div className="box_item">
@@ -141,7 +168,7 @@ const TourcardDetails = () => {
                     </div>
                   </div>
                   <div className="card-details">
-                    <p className="content-info">
+                    {/* <p id="page-details-des">
                       It is a long established fact that a reader will be
                       distracted by the readable content of a page when looking
                       at its layout. The point of using Lorem Ipsum is that it
@@ -151,11 +178,11 @@ const TourcardDetails = () => {
                       packages and web page editors now use Lorem Ipsum as their
                       default model text, and a search for 'lorem ipsum' will
                       uncover many web sites still in their infancy.
-                    </p>
+                    </p> */}
                     <div className="btn">
-                      <button className="tour-query-btn" onClick={handleOpen}>
+                      {/* <button className="tour-query-btn" id="page-details-des-btn" onClick={handleOpen}>
                         Submit Query
-                      </button>
+                      </button> */}
                       {isOpen && (
                         <div className="popup">
                           <div className="popup-content">

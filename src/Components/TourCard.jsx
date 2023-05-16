@@ -111,7 +111,9 @@ const TourCard = () => {
             const id = item.fields.sys;
             return (
               <div className="card-wrapper" key={id}>
-                <img src={imageUrl} alt="image1" className="img-div" />
+                <Link to={`/tour-details/${slug}`} className="card-btn">
+                  <img src={imageUrl} alt="image1" className="img-div" />
+                </Link>
                 <div className="card-details">
                   <div className="travel-info">
                     <div className="travel-place">

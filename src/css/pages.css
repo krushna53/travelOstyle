@@ -20,13 +20,14 @@
 
 .content-img {
   width: 100%;
-  height: 500px;
+  height: auto;
 }
 
-.content-info {
-  width: 100%;
-  padding: 20px 0;
-  text-align: justify;
+.content-info{
+  color: white;
+  opacity: 0;
+  max-width: 884px;
+  text-align: center;
 }
 
 .card-details .btn {
@@ -107,9 +108,8 @@
 .day-info ul {
   list-style-type: none;
   display: flex;
-  gap: 20px;
+  gap: 11px;
   flex-wrap: wrap;
-  /* justify-content: center; */
   align-items: center;
 }
 
@@ -297,14 +297,26 @@ button[type='submit'] {
   right: -9px;
   top: 17px;
 }
+.demoBanner:hover .content-info{
+  opacity: 1;
+}
+.demoBanner:hover .content-img{
+  filter: brightness(0.7);
+}
+#page-details-des, 
+#page-details-des-btn {
+  display: none;
+}
 
 @media only screen and (max-width: 767px) {
   .day-details-box {
     flex-direction: column;
+    padding: 34px 13px;
   }
 
   .place-img {
     width: 100%;
+    margin-top: 30px;
   }
 
   .day-info {
@@ -313,11 +325,59 @@ button[type='submit'] {
 
   .day-details-btn {
     padding: 16px 10px;
-    width: 90px;
+    width: 100%;
+    text-align: center;
   }
-
-  .day-info ul li {
-    margin-bottom: 20px;
+  .timeline-div {
+    display: flex;
+    flex-direction: column;
+    max-width: 340px;
+    gap: 22px;
+    margin: 48px auto 0px auto;
+  }
+  .timeline-left-div{
+    width: 100%;
+  }
+  .timeline-right-div{
+    width: 100%;
+  }
+  .tour-book-btn {
+    width: 109px;
+    height: 41px;
+    font-size: 14px;
+  }
+  .banner_title h1 {
+    font-size: 48px;
+  }
+  .banner_title {
+    top: 13%;
+    left: 0%;
+    right: 0%;
+    gap: 10px;
+  }
+  .content-img {
+    width: 100%;
+    height: 300px;
+  }
+  #page-details-des-btn {
+    display: block;
+    width: 113px;
+    height: 43px;
+    font-size: 13px;
+    margin: 14px 0px 0px 8px;
+  }
+  #page-details-des {
+    color: black;
+    max-width: 338px;
+    font-size: 14px;
+    text-align: justify;
+    margin: 22px auto 0px auto;
+  }
+  .demoBanner:hover .content-info {
+    display: none;
+  }
+  .demoBanner:hover .content-img {
+    filter: none;
   }
 }
 

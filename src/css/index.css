@@ -19,7 +19,7 @@ html {
 }
 
 .same_width {
-  margin: 90px auto 0px auto;
+  margin: 50px auto 0px auto;
   width: 1154px;
 }
 
@@ -401,7 +401,7 @@ html {
 }
 .price {
   position: absolute;
-  top: 10px;
+  top: 21px;
   left: 0px;
 }
 .img-div {
@@ -734,7 +734,8 @@ html {
 }
 
 .footer-background-folder span {
-  font-size: 19px;
+  font-size: 46px;
+  font-weight: 900;
 }
 
 .footer-background-folder h2 {
@@ -783,8 +784,8 @@ html {
 }
 
 .footer-background-folder h2 {
-  font-size: 39px;
-  margin: 10px 0px 50px 0px;
+  font-size: 21px;
+  margin: 8px 0px 50px 0px;
 }
 
 .footer-background-folder p {
@@ -980,7 +981,7 @@ html {
 
 .banner_title {
   position: absolute;
-  top: 38%;
+  top: 30%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1022,7 +1023,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 14;
+    z-index: 15;
   }
 
   .top-header-wrapper {
@@ -1037,7 +1038,7 @@ html {
     right: 3%;
     color: white;
     font-size: 25px;
-    z-index: 15;
+    z-index: 16;
     display: block;
   }
 
@@ -1077,7 +1078,7 @@ html {
     flex-direction: column;
     justify-content: flex-start;
     gap: 0px;
-    background: rgb(64 64 64 / 29%);
+    background: rgb(64 64 64 / 17%);
   }
 
   .banner-right-section {
@@ -1122,7 +1123,7 @@ html {
   }
 
   .book-tour-folder {
-    width: 366px;
+    width: 344px;
     max-width: 100%;
     margin: 0px auto;
     padding: 40px 16px;
@@ -1225,17 +1226,17 @@ html {
   }
 
   .about_us_content p {
-    max-width: 342px;
+    max-width: 326px;
     margin-left: 0px;
-    line-height: 1.9;
-    font-size: 15px;
+    line-height: 1.6;
+    font-size: 14px;
     margin-top: 16px;
   }
 
   .about_us {
-    width: 100%;
+    width: 342px;
     margin: 0px auto;
-    height: 665px;
+    height: 590px;
     max-height: 100%;
   }
 
@@ -1248,6 +1249,8 @@ html {
     font-size: 16px;
     width: 174px;
     margin: 0px auto;
+    display: flex;
+    justify-content: center;
   }
 
   .Get-Inspired-call-folder {
@@ -1256,12 +1259,12 @@ html {
   }
 
   .footer-background-folder h2 {
-    font-size: 33px;
+    font-size: 12px;
     margin: 10px 0px 38px 0px;
   }
 
   .footer-background-folder span {
-    font-size: 16px;
+    font-size: 28px;
   }
 
   .book-tour-section {
@@ -1284,8 +1287,8 @@ html {
   }
 
   .tour-filter button {
-    padding: 10px 21px;
-    font-size: 14px;
+    padding: 9px 17px;
+    font-size: 13px;
   }
 
   .tour-filter {
@@ -1303,8 +1306,9 @@ html {
   }
 
   .Tour-section {
-    padding: 45px 0px 50px 0px;
+    padding: 6px 0px 25px 0px;
     max-width: 387px;
+    margin: 45px auto 0px auto;
   }
 
   .footer-folder1 h2,
@@ -1326,7 +1330,11 @@ html {
   }
 
   .footer-container-wrapper span {
-    font-size: 9px;
+    font-size: 11px;
+    max-width: 237px;
+    display: block;
+    text-align: center;
+    margin: 0px auto;
   }
 
   .footer-container-wrapper span a {
@@ -1409,6 +1417,19 @@ html {
 
   .banner_title h1 {
     font-size: 30px;
+  }
+  .Tour-section .container .slick-next, 
+  .Tour-section .container .slick-prev {
+    display: none !important;
+  }
+  .Tour-section .container .slick-slide {
+    padding-left: 0px;
+    padding: 0px 5px;
+    width: 387px;
+  }
+  .container {
+    max-width: 353px;
+    margin: 0px auto;
   }
 }
 
