@@ -3,6 +3,7 @@ import banner_mobile from '../images/banner-mobile-image.jpg';
 import travelImage from '../images/ezgif.com-crop (1).gif'
 import client from '../Client';
 import banner_video from "../assets/video/pexels.mp4"
+import { Link } from "react-router-dom";
 // import ReactCurtain from "./ReactCurtain";
 
 function Banner() {
@@ -52,7 +53,7 @@ function Banner() {
                                                 <div className="banner-des-folder2">
                                                     <h2>{title}</h2>
                                                     <p>{description}</p>
-                                                    <a href="#">{linkField}</a>
+                                                  <Link to='/basicpage/about-us-detials'>{linkField}</Link> 
                                                 </div>
                                             </div>
                                         </div>

@@ -202,11 +202,11 @@ html {
 
 .banner-title {
   font-size: 141px;
-  width: 100%;
+  /* width: 100%; */
   margin-right: 0px;
   margin-left: auto;
   color: white;
-  /* transform: translateY(37px) !important; */
+  transform: translateY(37px) !important;
   font-weight: 900;
 }
 
@@ -243,12 +243,13 @@ html {
 }
 
 .banner-des-folder2 a {
-  border: 1px solid;
-  padding: 6px 14px;
-  color: white;
+  text-align: center;
+  font-size: 15px;
   text-decoration: none;
-  font-size: 13px;
-  border-radius: 7px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: white;
+  background-color: #54b7d1;
 }
 
 .banner-right-section {
@@ -778,15 +779,18 @@ html {
 
 /* contact us css end */
 
+
 /* footer start */
 .footer-background-folder {
   text-align: center;
   padding: 75px 0px 0px 0px;
   height: 500px;
-  background: url(../images/footer-background-image.avif) 0 0;
+  background: url(../images/banner-background.jpg) 0 0;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .footer-background-folder h2 {
@@ -1008,34 +1012,7 @@ html {
 
 
 /* new section css */
-.aspect-\[2\/1\] {
-  height: 600px;
-}
 
-.banner-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-}
-
-.banner-title {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.banner-button {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-
-}
 
 .banner-button:hover {
   background-color: #0056b3;
@@ -1056,12 +1033,10 @@ html {
   text-transform: uppercase;
   line-height: 0;
   color: rgb(255, 255, 255);
-
   min-height: 0px;
   min-width: 0px;
   max-height: none;
   max-width: none;
-
   opacity: 0.4;
   visibility: visible;
 }
@@ -1074,12 +1049,13 @@ html {
   padding-bottom: 0;
   position: relative;
   z-index: 2;
-
   opacity: 1;
-
   transform: translate(-17px, -35px);
   top: 100%;
-
+  -webkit-transform: translate(-17px, -35px);
+  -moz-transform: translate(-17px, -35px);
+  -ms-transform: translate(-17px, -35px);
+  -o-transform: translate(-17px, -35px);
 }
 
 .card-wrapper:hover img {
@@ -1265,15 +1241,31 @@ span.tour_nav a {
   margin-top: 30px;
   position: relative;
 }
-.support h3{
+
+.support h3 {
   border-bottom: 1px solid #e6e2e3;
   padding-bottom: 10px;
 }
-.support p{
+
+.support p {
   font-size: 17px;
   line-height: 2;
   padding-top: 10px;
   font-weight: 100;
+}
+
+.tour-details-container {
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  position: relative;
+  height: 600px;
+}
+.details_main{
+  position: relative;
+}
+.main_info {
+  padding: 15px 15px 30px 15px;
 }
 /* end. */
 
@@ -1683,47 +1675,34 @@ span.tour_nav a {
     width: 100% !important;
   }
 
-  .banner_title {
-    top: 10%;
-    right: 21%;
-    gap: 10px;
-  }
-
   .banner_title h1 {
     font-size: 30px;
   }
-  .tour-left-content{
+
+  .tour-left-content {
     display: block;
   }
+
   .left_wrapper,
   .container,
-  .Right_tour{
+  .Right_tour {
     width: 100%;
   }
-  .Tour-section .slick-next{
+
+  .Tour-section .slick-next {
     top: 100%;
     left: 70px;
   }
-  .Tour-section .container .slick-prev{
+
+  .Tour-section .container .slick-prev {
     left: 0;
-      top: 100%;
+    top: 100%;
   }
-  .d_flex{
-  justify-content: space-around;
-}
-.banner-content,
-.banner-title{
-  width: 100%;
+
+  .d_flex {
+    justify-content: space-around;
+  }
 
 }
-.banner-title{
-  font-size: 18px;
-  font-weight: 100;
-  transform: translate(0) !important;
-  -webkit-transform: translate(0) !important;
-  -moz-transform: translate(0) !important;
-  -ms-transform: translate(0) !important;
-  -o-transform: translate(0) !important;
-}
-}
+
 /* responsive end */
