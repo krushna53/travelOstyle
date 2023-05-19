@@ -32,7 +32,9 @@
 .card-details .btn {
   display: flex;
   gap: 25px;
-
+  position: absolute;
+  top: 44%;
+  left: 10%;
 }
 
 .tour-book-btn {
@@ -186,14 +188,15 @@
 }
 
 .tour-query-btn {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 155px;
-  color: white;
-  height: 50px;
-  font-size: 18px;
+  padding: 0.5rem 0.4rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 140px;
+    color: white;
+    height: 40px;
+    margin-top: 30px;
+    font-size: 18px;
 }
 
 form {

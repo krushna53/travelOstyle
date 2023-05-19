@@ -6,7 +6,7 @@ const TourRightSidebar = () => {
     <>
       <div className="Right_tour">
         <div className="price_right">
-          <i class="fa-solid fa-tag"></i>
+          <i className="fa-solid fa-tag"></i>
           <span>From:</span>
           <h2>$1,900</h2>
         </div>

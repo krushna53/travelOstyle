@@ -108,7 +108,7 @@ const TourCard = () => {
             const { slug, packageTitle, packageStartingPrice, exclusions,description } = item.fields;
             const richTextContent = documentToReactComponents(description)
             const imageUrl = (item?.fields?.packageBanner?.fields?.file?.url) ? item?.fields?.packageBanner?.fields?.file?.url : '';
-            const id = item.fields.sys;
+            const id = item.sys.id;
             return (
               <div className="card-wrapper" key={id}>
                 <img src={imageUrl} alt="image1" className="img-div" />
@@ -124,10 +124,10 @@ const TourCard = () => {
                       <span className="card-price">${packageStartingPrice}</span>
                     </div>
                   </div>
-                  <p className="card-des">
+                  <p >
                     {/* Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Quod harum magni tenetur */}
-                    {richTextContent}
+                    {richTextContent }
                   </p>
                   <Link to={`/tour-details/${slug}`} className="card-btn">
                     Details
