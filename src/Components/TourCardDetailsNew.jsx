@@ -7,6 +7,7 @@ import { faClock } from "@fortawesome/free-regular-svg-icons";
 import TourRightSidebar from "./TourRightSidebar";
 import { useParams } from "react-router-dom";
 import client from "../Client";
+import image from '../images/closeup-pins-map-planning-travel-journey.jpg'
 
 const TourCardDetailsNew = () => {
   const { slug } = useParams();
@@ -226,12 +227,13 @@ const TourCardDetailsNew = () => {
                 <div className="content">
                   <h3>Map</h3>
                 </div>
-                <iframe
+                {/* <iframe
                   width="100%"
                   title="map"
                   height="480"
                   src="https://maps.google.com/maps?hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                ></iframe>
+                ></iframe> */}
+                <img src={image} alt="map" />
               </div>
             </div>
             <TourRightSidebar />

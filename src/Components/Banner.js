@@ -1,37 +1,35 @@
 import React, { useState, useEffect } from "react";
-import banner_mobile from '../images/banner-mobile-image.jpg';
-import travelImage from '../images/ezgif.com-crop (1).gif'
-import client from '../Client';
-import banner_video from "../assets/video/pexels.mp4"
-import { Link } from "react-router-dom";
-// import ReactCurtain from "./ReactCurtain";
+// import banner_mobile from '../images/banner-mobile-image.jpg';
+// import travelImage from '../images/ezgif.com-crop (1).gif'
+// import client from '../Client';
+// import banner_video from "../assets/video/pexels.mp4"
+// import { Link } from "react-router-dom";
+import BannerNew from "./BannerNew";
 
 function Banner() {
-  const [checked, setChecked] = useState(true);
-
-  const [entry, setEntry] = useState([]);
-
-    useEffect(() => {
-        const fetchPage = async () => {
-            try {
-                const response = await client.getEntries({
-                    content_type: "banner",
-                });
-                console.log()
-                console.log(response)
-                if (response.items.length) {
-                    setEntry(response.items);
-                }
-            } catch (error) {
-                console.error(error);
-            }
-        };
-        fetchPage();
+//   const [checked, setChecked] = useState(true);
+//   const [entry, setEntry] = useState([]);
+//     useEffect(() => {
+//         const fetchPage = async () => {
+//             try {
+//                 const response = await client.getEntries({
+//                     content_type: "banner",
+//                 });
+//                 console.log()
+//                 console.log(response)
+//                 if (response.items.length) {
+//                     setEntry(response.items);
+//                 }
+//             } catch (error) {
+//                 console.error(error);
+//             }
+//         };
+//         fetchPage();
     
-    }, []);
+//     }, []);
     return (
         <>
-            {
+            {/* {
                 entry.map((item) => {
                     const { title, description, leftTitle, linkField, rightTitle } = item.fields;
                     const imageUrl = (item.fields.image.fields.file.url);
@@ -72,7 +70,8 @@ function Banner() {
                     )
                 })
             }
-           
+            */}
+            <BannerNew/>
         </>
     )
 }
