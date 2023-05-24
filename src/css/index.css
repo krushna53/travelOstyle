@@ -1034,31 +1034,100 @@ html {
 
 
 .banner_new {
-  /* background: url(../images/2899721.jpg)no-repeat; 
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed; */
-  height: 500px;
-  background: #385a64;
-  color: #fff;
+  /* height: 500px; */
+  background: url('../images/x1jg_vsos_211025-removebg-preview.png') no-repeat;
+  /* color: #fff; */
+  background-position: 40% 100%;
+  background-size: 21% 53%;
+}
+
+.gGCbNn {
+  width: 80%;
+  margin: 60px auto auto;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow-x: hidden;
+}
+
+.banner_left_con {
+  width: 500px;
+}
+
+.red {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: rgb(223, 105, 81);
+}
+
+.banner_left_con .title {
+  font-family: Volkhov;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 89px;
+  letter-spacing: -0.04em;
+  color: rgb(24, 30, 75);
+}
+
+.banner_left_con .title {
+  position: relative;
+}
+
+.banner_left_con .title::after {
+  position: absolute;
+  bottom: 10px;
+  left: -20px;
+  z-index: -100;
+  background-image: url(../images/EnjoyDecore.png);
+  content: "";
+  width: 350px;
+  height: 10px;
 }
 
 .Banner_content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
-.banner_new .same_width{
+
+.banner_new .same_width {
   margin-top: 0;
 }
+
 .Banner_content img {
-  width: 100%;
+  width: auto;
   height: 100%;
+  animation: fade-in 10s ease-in-out infinite;
+  -webkit-animation: fade-in 10s ease-in-out infinite;
 }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+
 .banner_new .left,
-.banner_new .right{
+.banner_new .right {
   width: 50%;
 }
+
 .banner_new button.btn {
   background-color: #54b7d1;
   border-radius: 5px;
