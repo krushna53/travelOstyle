@@ -500,7 +500,7 @@ html {
 
 .Tour-section .container .slick-slide {
   margin-bottom: 15px;
-  padding-left: 10px;
+  /* padding-left: 10px; */
 }
 
 .Tour-section .container .slick-prev {
@@ -1034,16 +1034,16 @@ html {
 
 
 .banner_new {
-  /* height: 500px; */
+  height: 500px;
   background: url('../images/x1jg_vsos_211025-removebg-preview.png') no-repeat;
   /* color: #fff; */
-  background-position: 40% 100%;
+  background-position: 70% 70%;
   background-size: 21% 53%;
 }
 
-.gGCbNn {
-  width: 80%;
-  margin: 60px auto auto;
+.banner_new .d_flex {
+  width: 100%;
+  margin: auto;
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -1052,7 +1052,42 @@ html {
 }
 
 .banner_left_con {
-  width: 500px;
+  width: 100%;
+}
+
+.banner_new img {
+  width: 100%;
+}
+
+.banner_new div.dec {
+  font-size: 18px;
+  color: #535557;
+  margin-top: 30px;
+}
+
+.banner_btn {
+  margin-top: 30px;
+}
+
+.banner_btn button {
+  background: #137deb;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-bottom: 5px;
+  width: 120px;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.banner_btn button:is(:hover, :focus) {
+  background: #121212;
 }
 
 .red {
@@ -1081,64 +1116,14 @@ html {
 
 .banner_left_con .title::after {
   position: absolute;
-  bottom: 10px;
-  left: -20px;
+  bottom: 6px;
+  left: 7%;
   z-index: -100;
   background-image: url(../images/EnjoyDecore.png);
+  background-repeat: no-repeat;
   content: "";
-  width: 350px;
+  width: 100%;
   height: 10px;
-}
-
-.Banner_content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
-
-.banner_new .same_width {
-  margin-top: 0;
-}
-
-.Banner_content img {
-  width: auto;
-  height: 100%;
-  animation: fade-in 10s ease-in-out infinite;
-  -webkit-animation: fade-in 10s ease-in-out infinite;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0.4;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0.5;
-  }
-}
-
-
-.banner_new .left,
-.banner_new .right {
-  width: 50%;
-}
-
-.banner_new button.btn {
-  background-color: #54b7d1;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 15px;
-  padding: 10px 15px;
-  text-align: center;
-  /* text-decoration: none; */
-  border: none;
-  cursor: pointer;
-  margin-top: 20px;
 }
 
 .card-wrapper:hover img {
@@ -1800,7 +1785,17 @@ span.tour_nav a {
   .d_flex {
     justify-content: space-around;
   }
-
+  .banner_new .d_flex{
+    display: block;
+  }
+  .banner_left_con{
+    padding: 0 10px;
+  }
+  .banner_new{
+    height: 100%;
+    background-position: bottom;
+    background-size: 25% 15%;
+  }
 }
 
 /* responsive end */
