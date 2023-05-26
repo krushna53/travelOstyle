@@ -1,17 +1,18 @@
 import React, { useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import emailjs from "@emailjs/browser";
-import { FaUserAlt } from 'react-icons/fa';
+import { FaUserAlt } from "react-icons/fa";
 import "react-toastify/dist/ReactToastify.css";
-import { MdEmail } from 'react-icons/md'
+import { MdEmail } from "react-icons/md";
 import emailjs from "@emailjs/browser"
 
 function ContactUs() {
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
-  const [isValidEmail, setIsValidEmail] = useState(false)
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isValidEmail, setIsValidEmail] = useState(false);
+  const [isNameFocused, setIsNameFocused] = useState(false);
+  const [isEmailFocused, setIsEmailFocused] = useState(false);
 
   const notify = () => {
     toast.success("Your Request has been sent😊", {
@@ -27,50 +28,51 @@ function ContactUs() {
   };
 
   function handleEmailChange(event) {
-    const inputEmail = event.target.value
-    setEmail(inputEmail)
+    const inputEmail = event.target.value;
+    setEmail(inputEmail);
 
-    const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
-    setIsValidEmail(emailRegex.test(inputEmail))
+    const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+    setIsValidEmail(emailRegex.test(inputEmail));
   }
 
   function NameinputChange(e) {
-    const inputText = e.target.value
-    setName(inputText)
+    const inputText = e.target.value;
+    setName(inputText);
   }
 
   function MessageInputChange(e) {
-    const inputText = e.target.value
-    setMessage(inputText)
+    const inputText = e.target.value;
+    setMessage(inputText);
   }
-  const form = useRef()
-  const sendEmail = e => {
-    e.preventDefault()
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
     if (isValidEmail) {
       emailjs
         .sendForm(
           "service_9spedfi",
           "template_juxtdiw",
           form.current,
-          "JEUgk1jZnrZLqJz5k",
+          "JEUgk1jZnrZLqJz5k"
         )
         .then(
-          result => {
-            notify()
-            console.log(result.text)
-            setName("")
-            setEmail("")
-            setMessage("")
+          (result) => {
+            notify();
+            console.log(result.text);
+            setName("");
+            setEmail("");
+            setMessage("");
           },
-          error => {
-            console.log(error.text)
+          (error) => {
+            console.log(error.text);
           }
-        )
+        );
     } else {
       //   toast.error("Please enter a correct email value");
-      console.log("Email is invalide")
+      console.log("Email is invalide");
     }
-  }
+  };
+
   return (
     <>
       <div className="book-tour-section">
@@ -83,7 +85,7 @@ function ContactUs() {
                 again is there anyone.
               </p>
               <div className="input-contenar">
-                <div className="input-folder">
+              <div className="input-folder">
                   <input
                     type="text"
                     className="inner-input"
@@ -92,10 +94,14 @@ function ContactUs() {
                     required
                     value={name}
                     onChange={NameinputChange}
+                    onFocus={() => setIsNameFocused(true)}
+                    onBlur={() => setIsNameFocused(false)}
                   />
-                  <a href="/" className="input-icons">
-                    <FaUserAlt />
-                  </a>
+                  {!isNameFocused && (
+                    <a href="/" className="input-icons">
+                      <FaUserAlt />
+                    </a>
+                  )}
                 </div>
                 <div className="input-folder">
                   <input
@@ -106,10 +112,15 @@ function ContactUs() {
                     required
                     value={email}
                     onChange={handleEmailChange}
+                    onFocus={() => setIsEmailFocused(true)}
+                    onBlur={() => setIsEmailFocused(false)}
                   />
+                  {!isEmailFocused &&(
                   <a href="/" className="input-icons">
                     <MdEmail />
                   </a>
+                  )
+                  }
                 </div>
               </div>
               <textarea

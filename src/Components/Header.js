@@ -18,7 +18,7 @@ function Header() {
                 <div className="top-header-section">
                     <div className="top-header-wrapper">
                         <div className="logo">
-                            <h2>Travleostyle</h2>
+                            <h2><a href="/">Travleostyle</a></h2>
                         </div>
                         <ul onClick={toggleModal} className="menu">
                             <li><NavLink to="/">Home</NavLink></li>
@@ -32,7 +32,7 @@ function Header() {
             <div className="top-header-section-folder">
                 <div className="top-header-wrapper-folder">
                     <div className="logo-folder">
-                        <h2>Travleostyle</h2>
+                    <h2><a href="/">Travleostyle</a></h2>
                     </div>
                     <ul onClick={toggleModal} className="menu-folder">
                         <li><NavLink to="/">Home</NavLink></li>
