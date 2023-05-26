@@ -85,7 +85,7 @@ const TourCard = () => {
   return (
     <div className="Tour-section" id="scroll-down">
       <h2>Packages</h2>
-      <div className="tour-filter">
+      <div className="">
         <div className="tour-filter">
           <button onClick={() => setSelectedFilter('All')} className={selectedFilter === 'All' ? 'active' : ''}>All</button>
 
@@ -111,7 +111,9 @@ const TourCard = () => {
             const id = item.sys.id;
             return (
               <div className="card-wrapper" key={id}>
+                <Link to={`/tour-details/${slug}`}>
                 <img src={imageUrl} alt="image1" className="img-div" />
+                </Link>
                 <div className="card-details">
                   <div className="travel-info">
                     <div className="travel-place">

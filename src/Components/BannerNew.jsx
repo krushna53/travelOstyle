@@ -22,7 +22,8 @@ const BannerNew = () => {
   }, []);
   return (
     <>
-      <section className="banner_new ">
+      <section className="banner_new">
+       
         <div className="banner_com same_width">
           <div className="d_flex">
             {entry.map((item, i) => {
